@@ -1066,30 +1066,35 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.xroom-logo-block {
-  min-height: 160px;
-  background: linear-gradient(135deg, #2a1f5e 0%, #1a3a6e 50%, #0d4a4a 100%);
-  border-radius: var(--radius-sm);
-  display: flex;
+.xroom-videos {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  text-align: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  min-height: auto;
+}
+
+.xroom-video-card {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
   border: 1px solid var(--border);
+  background: #000;
 }
 
-.xroom-logo-block h3 {
-  font-family: var(--font-pixel);
-  font-size: 0.85rem;
-  color: #fff;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.5rem;
+.xroom-video-card .pipeline-label {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-soft);
+  text-align: center;
+  margin-bottom: 0;
 }
 
-.xroom-logo-block p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.9rem;
+.xroom-video-card video {
+  width: 100%;
+  max-height: 220px;
+  display: block;
+  object-fit: contain;
 }
 
 .project-thumb.xroom {

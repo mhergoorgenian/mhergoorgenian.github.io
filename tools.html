@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Tools | Mher Goorgenian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/pixel.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-block">
+      <img src="assets/character.png" alt="Pixel game developer character" class="character-mini" width="52" height="78">
+      <div>
+        <h1 class="site-title">GAME TOOLS</h1>
+        <p class="site-subtitle">2D DEV UTILITIES</p>
+      </div>
+    </div>
+    <nav class="pixel-nav" aria-label="Main">
+      <a href="index.html" class="nav-link">RESUME</a>
+      <a href="tools.html" class="nav-link active">TOOLS</a>
+      <a href="xr.html" class="nav-link">XR / VR / AR</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="pixel-panel hero-panel">
+      <h2 class="panel-title">&gt; INVENTORY</h2>
+      <p class="hero-text">
+        A collection of Python + Gradio tools I built for 2D game development workflows —
+        image processing, procedural level design, and sprite sheet pipelines.
+      </p>
+    </section>
+
+    <section class="tool-showcase">
+      <!-- BG Remover -->
+      <article class="tool-card" id="bg-remover">
+        <div class="tool-visual bg-remover-demo" aria-hidden="true">
+          <div class="demo-sprite char"></div>
+          <div class="demo-arrow">→</div>
+          <div class="demo-sprite char-cutout"></div>
+        </div>
+        <div class="tool-content">
+          <span class="tool-tag">IMAGE · AI</span>
+          <h2>Background Remover</h2>
+          <p>
+            High-quality AI background removal powered by <strong>BiRefNet</strong> via rembg.
+            Drag-and-drop web UI with multiple models — handles hair, fur, glass, and complex edges.
+            Supports alpha matting for sharper cutouts. CLI included.
+          </p>
+          <ul class="tool-features">
+            <li>BiRefNet General / Portrait / Lite</li>
+            <li>ISNet & U2Net model options</li>
+            <li>Alpha matting with fine-tuned thresholds</li>
+            <li>Transparent PNG export</li>
+            <li>Gradio web UI + Click CLI</li>
+          </ul>
+          <div class="tool-stack">
+            <span>Python</span><span>Gradio</span><span>rembg</span><span>Pillow</span>
+          </div>
+          <div class="tool-actions">
+            <a href="https://github.com/mhergoorgenian/bg-remover" target="_blank" rel="noopener" class="pixel-btn tool-repo">
+              VIEW ON GITHUB
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Dungeon Map -->
+      <article class="tool-card reverse" id="dungeon-map">
+        <div class="tool-visual dungeon-demo" aria-hidden="true">
+          <div class="dungeon-preview">
+            <div class="dungeon-room r1"></div>
+            <div class="dungeon-room r2"></div>
+            <div class="dungeon-room r3"></div>
+            <div class="dungeon-shaft"></div>
+            <div class="dungeon-room r4"></div>
+            <div class="dungeon-room r5"></div>
+          </div>
+        </div>
+        <div class="tool-content">
+          <span class="tool-tag">PROCEDURAL · LEVEL DESIGN</span>
+          <h2>Dungeon Map Generator</h2>
+          <p>
+            Procedural <strong>Metroidvania-style</strong> 2D side-view dungeon silhouettes.
+            Generates horizontal floors, vertical shafts, chambers, and looping paths with
+            configurable seeds and exportable room data.
+          </p>
+          <ul class="tool-features">
+            <li>Seed-based reproducible maps</li>
+            <li>Floor count, rooms, shafts, loops</li>
+            <li>Edge roughness & extra branches</li>
+            <li>PNG map + JSON room metadata export</li>
+            <li>CLI for batch generation</li>
+          </ul>
+          <div class="tool-stack">
+            <span>Python</span><span>Gradio</span><span>OpenCV</span><span>NumPy</span>
+          </div>
+          <div class="tool-actions">
+            <a href="https://github.com/mhergoorgenian/dungeon-map-generator" target="_blank" rel="noopener" class="pixel-btn tool-repo">
+              VIEW ON GITHUB
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video Sprite -->
+      <article class="tool-card" id="video-sprite">
+        <div class="tool-visual sprite-demo" aria-hidden="true">
+          <div class="sprite-sheet-preview">
+            <div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
+            <div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
+            <div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
+            <div class="sprite-cell active"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
+          </div>
+        </div>
+        <div class="tool-content">
+          <span class="tool-tag">VIDEO · SPRITES</span>
+          <h2>Video to Sprite Sheet</h2>
+          <p>
+            Turn gameplay or reference videos into transparent sprite sheets. Extracts frames,
+            removes backgrounds with BiRefNet, trims padding, and packs into a grid with
+            JSON frame metadata for game engines.
+          </p>
+          <ul class="tool-features">
+            <li>Configurable frame count & grid layout</li>
+            <li>HQ upscaling for small source frames</li>
+            <li>Alpha matting & output scale control</li>
+            <li>16-frame default (4×4 grid)</li>
+            <li>JSON metadata per frame bounds</li>
+          </ul>
+          <div class="tool-stack">
+            <span>Python</span><span>Gradio</span><span>rembg</span><span>OpenCV</span>
+          </div>
+          <div class="tool-actions">
+            <a href="https://github.com/mhergoorgenian/video-to-sprite" target="_blank" rel="noopener" class="pixel-btn tool-repo">
+              VIEW ON GITHUB
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="pixel-panel">
+      <h2 class="panel-title">&gt; HOW TO RUN</h2>
+      <pre class="code-block"><code># Each tool is standalone — install deps and launch:
+
+cd bgRemover
+pip install -r requirements.txt
+python app.py
+
+cd dungeonMap
+pip install -r requirements.txt
+python app.py
+
+cd videoSprite
+pip install -r requirements.txt
+python app.py</code></pre>
+      <p class="note-text">Clone any repo from <a href="https://github.com/mhergoorgenian">github.com/mhergoorgenian</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 MHER GOORGENIAN · <a href="index.html">← BACK TO RESUME</a></p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

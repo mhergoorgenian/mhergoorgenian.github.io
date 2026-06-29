@@ -1082,14 +1082,6 @@ body {
   background: #000;
 }
 
-.xroom-video-card .pipeline-label {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  background: var(--bg-soft);
-  text-align: center;
-  margin-bottom: 0;
-}
-
 .xroom-video-card video {
   width: 100%;
   max-height: 220px;

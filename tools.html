@@ -118,13 +118,8 @@
 
       <!-- Video Sprite -->
       <article class="tool-card" id="video-sprite">
-        <div class="tool-visual sprite-demo" aria-hidden="true">
-          <div class="sprite-sheet-preview">
-            <div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
-            <div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
-            <div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
-            <div class="sprite-cell active"></div><div class="sprite-cell"></div><div class="sprite-cell"></div><div class="sprite-cell"></div>
-          </div>
+        <div class="tool-visual tool-example-visual">
+          <video class="tool-example-video" src="assets/intro-example.mp4" autoplay muted loop playsinline aria-label="Example input video"></video>
         </div>
         <div class="tool-content">
           <span class="tool-tag">VIDEO · SPRITES</span>
@@ -151,6 +146,34 @@
           </div>
         </div>
       </article>
+    </section>
+
+    <section class="pixel-panel" id="sprite-example">
+      <h2 class="panel-title">&gt; WORKFLOW EXAMPLE</h2>
+      <p class="hero-text">Boss intro clip → frame extraction → transparent sprite sheet, ready for your game engine.</p>
+      <div class="pipeline-grid">
+        <article class="pipeline-step">
+          <span class="pipeline-label">1 · INPUT VIDEO</span>
+          <div class="pipeline-media">
+            <video src="assets/intro-example.mp4" controls muted playsinline poster="assets/sprite-boss.png"></video>
+          </div>
+          <p class="pipeline-caption">Source clip — <code>Intro.mp4</code></p>
+        </article>
+        <article class="pipeline-step">
+          <span class="pipeline-label">2 · EXTRACTED FRAME</span>
+          <div class="pipeline-media checkerboard">
+            <img src="assets/sprite-boss.png" alt="Extracted boss sprite with transparent background" class="pixel-art-img">
+          </div>
+          <p class="pipeline-caption">Background removed per frame</p>
+        </article>
+        <article class="pipeline-step">
+          <span class="pipeline-label">3 · SPRITE SHEET</span>
+          <div class="pipeline-media checkerboard">
+            <img src="assets/sprite-sheet-example.png" alt="Final sprite sheet with animation frames" class="pixel-art-img">
+          </div>
+          <p class="pipeline-caption">Packed grid with frame metadata</p>
+        </article>
+      </div>
     </section>
 
     <section class="pixel-panel">

@@ -1087,6 +1087,95 @@ body {
   letter-spacing: 0.08em;
 }
 
+/* Tool examples */
+.tool-example-visual {
+  padding: 0.5rem;
+  background: var(--bg-card);
+}
+
+.tool-example-video {
+  width: 100%;
+  max-height: 220px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: #000;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.pipeline-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  text-align: center;
+}
+
+.pipeline-label {
+  font-family: var(--font-pixel);
+  font-size: 0.38rem;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.pipeline-media {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pipeline-media.checkerboard {
+  background-image:
+    linear-gradient(45deg, var(--border-soft) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--border-soft) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--border-soft) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--border-soft) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  background-color: var(--bg-soft);
+}
+
+.pipeline-media video {
+  width: 100%;
+  max-height: 200px;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.pixel-art-img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.pipeline-caption {
+  margin-top: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.pipeline-caption code {
+  font-size: 0.82rem;
+  background: var(--code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
 .site-footer a {
   color: var(--accent);
   text-decoration: none;

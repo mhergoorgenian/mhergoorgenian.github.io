@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mher Goorgenian | Game Developer</title>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,11 +25,14 @@
         <p class="site-subtitle">GAME DEVELOPER</p>
       </div>
     </div>
-    <nav class="pixel-nav" aria-label="Main">
-      <a href="index.html" class="nav-link active">RESUME</a>
-      <a href="tools.html" class="nav-link">TOOLS</a>
-      <a href="xr.html" class="nav-link">XR / VR / AR</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="pixel-nav" aria-label="Main">
+        <a href="index.html" class="nav-link active">RESUME</a>
+        <a href="tools.html" class="nav-link">TOOLS</a>
+        <a href="xr.html" class="nav-link">XR / VR / AR</a>
+      </nav>
+      <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
   </header>
 
   <main class="container">
@@ -50,6 +60,17 @@
     <section class="pixel-panel">
       <h2 class="panel-title">&gt; EXPERIENCE</h2>
       <div class="quest-list">
+        <article class="quest-card">
+          <div class="quest-header">
+            <span class="quest-icon">🌐</span>
+            <div>
+              <h3>Unity / XR Developer</h3>
+              <p class="quest-meta">Dadechin Creative Studio · XRoom Platform</p>
+            </div>
+          </div>
+          <p>Develop immersive XR experiences on the XRoom metaverse platform — virtual spaces for training, meetings, and events. Built interactive 3D environments accessible on desktop and mobile without requiring a headset.</p>
+        </article>
+
         <article class="quest-card">
           <div class="quest-header">
             <span class="quest-icon">⚔</span>
@@ -93,7 +114,7 @@
           <li>C#</li>
           <li>Python</li>
           <li>Flask</li>
-          <li>AR / VR</li>
+          <li>AR / VR / XR</li>
           <li>Game Dev</li>
           <li>MySQL</li>
           <li>Level Design</li>
@@ -108,12 +129,6 @@
           <li><span>Persian</span><span class="lang-level">Native</span></li>
           <li><span>English</span><span class="lang-level">Professional</span></li>
         </ul>
-        <h2 class="panel-title mt">>&nbsp;EDUCATION</h2>
-        <p class="edu-block">
-          <strong>Sobhe Sadegh Institute Of Higher Education</strong><br>
-          B.E. Computer Engineering<br>
-          <span class="quest-meta">Sep 2020 – Jul 2024</span>
-        </p>
       </div>
     </section>
 
@@ -121,10 +136,16 @@
       <h2 class="panel-title">&gt; PROJECTS</h2>
       <div class="project-grid">
         <article class="project-card">
+          <div class="project-thumb xroom">XROOM</div>
+          <h3>XRoom Metaverse</h3>
+          <p>XR platform for virtual spaces — training, meetings & events. Built at Dadechin Creative Studio.</p>
+          <a href="xr.html#xroom" class="pixel-link">VIEW XR WORK →</a>
+        </article>
+        <article class="project-card">
           <div class="project-thumb deco">AR</div>
           <h3>DecoVision</h3>
           <p>AR interior design app — visualize furniture placement in real spaces with Unity & ARFoundation.</p>
-          <a href="xr.html" class="pixel-link">VIEW XR WORK →</a>
+          <a href="xr.html#decovision" class="pixel-link">VIEW XR WORK →</a>
         </article>
         <article class="project-card">
           <div class="project-thumb game">⚔</div>

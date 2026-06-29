@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Tools | Mher Goorgenian</title>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,11 +25,14 @@
         <p class="site-subtitle">2D DEV UTILITIES</p>
       </div>
     </div>
-    <nav class="pixel-nav" aria-label="Main">
-      <a href="index.html" class="nav-link">RESUME</a>
-      <a href="tools.html" class="nav-link active">TOOLS</a>
-      <a href="xr.html" class="nav-link">XR / VR / AR</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="pixel-nav" aria-label="Main">
+        <a href="index.html" class="nav-link">RESUME</a>
+        <a href="tools.html" class="nav-link active">TOOLS</a>
+        <a href="xr.html" class="nav-link">XR / VR / AR</a>
+      </nav>
+      <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
   </header>
 
   <main class="container">

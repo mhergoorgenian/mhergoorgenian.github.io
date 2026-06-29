@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XR / VR / AR | Mher Goorgenian</title>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,32 +25,98 @@
         <p class="site-subtitle">IMMERSIVE EXPERIENCES</p>
       </div>
     </div>
-    <nav class="pixel-nav" aria-label="Main">
-      <a href="index.html" class="nav-link">RESUME</a>
-      <a href="tools.html" class="nav-link">TOOLS</a>
-      <a href="xr.html" class="nav-link active">XR / VR / AR</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="pixel-nav" aria-label="Main">
+        <a href="index.html" class="nav-link">RESUME</a>
+        <a href="tools.html" class="nav-link">TOOLS</a>
+        <a href="xr.html" class="nav-link active">XR / VR / AR</a>
+      </nav>
+      <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
   </header>
 
   <main class="container">
     <section class="pixel-panel hero-panel xr-hero">
       <h2 class="panel-title">&gt; DIMENSION SHIFT</h2>
       <p class="hero-text">
-        I build augmented and location-based experiences in Unity — from interior design
-        visualization to AR gameplay. Comfortable with ARFoundation, Vuforia, and spatial
-        interaction design.
+        I build augmented, virtual, and extended reality experiences in Unity — from metaverse
+        platforms and XR training to AR interior design. Comfortable with ARFoundation, Vuforia,
+        and spatial interaction design.
       </p>
       <div class="xr-badges">
         <span>Unity</span>
+        <span>XR / Metaverse</span>
         <span>ARFoundation</span>
         <span>Vuforia</span>
         <span>C#</span>
-        <span>Spatial UI</span>
       </div>
     </section>
 
     <section class="xr-showcase">
-      <article class="xr-card featured">
+      <!-- XRoom -->
+      <article class="xr-card featured-xroom" id="xroom">
+        <div class="xr-visual">
+          <div class="xroom-logo-block">
+            <h3>XROOM</h3>
+            <p>Where reality is more virtual than ever</p>
+          </div>
+        </div>
+        <div class="xr-content">
+          <span class="tool-tag">METAVERSE · XR PLATFORM</span>
+          <h2>XRoom</h2>
+          <p class="xroom-tagline">Where reality is more virtual than ever.</p>
+          <p>
+            Step into a world with <strong>XROOM</strong> where there are no boundaries for creativity,
+            connection, and experience. We provide the tools to build personalized virtual spaces,
+            host meetings, training sessions, and events at a completely new level — and experience
+            the future today.
+          </p>
+          <ul class="tool-features">
+            <li>Customizable virtual spaces for training, meetings & events</li>
+            <li>Runs on desktop and mobile — no headset required</li>
+            <li>XR training modules (e.g. generator maintenance)</li>
+            <li>Built under tight deployment constraints with minimal cost</li>
+            <li>Platform: <a href="https://my.xroomapp.com" target="_blank" rel="noopener">my.xroomapp.com</a></li>
+          </ul>
+          <p class="quest-meta">Role: Unity / XR Developer · Dadechin Creative Studio</p>
+          <a href="https://my.xroomapp.com" target="_blank" rel="noopener" class="pixel-btn">VISIT XROOM</a>
+        </div>
+      </article>
+
+      <section class="pixel-panel">
+        <h2 class="panel-title">&gt; DEMOS &amp; VIDEOS</h2>
+        <div class="media-grid">
+          <article class="media-card">
+            <h3>XROOM TRAINING DEMO</h3>
+            <div class="media-embed">
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7461402902058868736"
+                title="XRoom generator maintenance training demo"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="media-caption">
+              XR training for generator maintenance on the XRoom platform — no headset needed,
+              runs on mobile. <a href="https://www.linkedin.com/posts/pooriyasaboor_aepahyagpaebaezaewaet-agvaewaecahyabraetaewaeqaepahyaes-activity-7461402902058868736-XOSQ" target="_blank" rel="noopener">Watch on LinkedIn</a>
+            </p>
+          </article>
+          <article class="media-card">
+            <h3>DADECHIN · METAVERSE</h3>
+            <div class="media-embed">
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7381337955572826113"
+                title="Dadechin Creative Studio metaverse project"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="media-caption">
+              Metaverse work at Dadechin Creative Studio. <a href="https://www.linkedin.com/posts/dadechin_metaverse-activity-7381337955572826113-Nf7k" target="_blank" rel="noopener">Watch on LinkedIn</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <article class="xr-card featured" id="decovision">
         <div class="xr-visual decovision" aria-hidden="true">
           <div class="ar-frame">
             <div class="ar-room"></div>
@@ -96,41 +169,11 @@
           <p class="quest-meta">Role: Unity Developer · DynamicPixels · 2023–2024</p>
         </div>
       </article>
-
-      <article class="xr-card reverse">
-        <div class="xr-visual skills-vr" aria-hidden="true">
-          <div class="vr-headset">
-            <div class="vr-lens left"></div>
-            <div class="vr-lens right"></div>
-            <div class="vr-strap"></div>
-          </div>
-        </div>
-        <div class="xr-content">
-          <span class="tool-tag">SKILL SET</span>
-          <h2>XR Development Stack</h2>
-          <p>Core technologies and practices I apply across immersive projects:</p>
-          <ul class="tool-features">
-            <li><strong>Unity</strong> — primary engine for AR/VR prototypes & shipping apps</li>
-            <li><strong>ARFoundation</strong> — plane detection, anchors, light estimation</li>
-            <li><strong>Vuforia</strong> — image & object tracking experiences</li>
-            <li><strong>Spatial UX</strong> — intuitive placement, scale, and feedback</li>
-            <li><strong>C#</strong> — gameplay systems, UI, and SDK integration</li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <section class="pixel-panel">
-      <h2 class="panel-title">&gt; MORE TO ADD</h2>
-      <p class="hero-text">
-        This section will be expanded with demos, videos, and project links when you provide
-        additional portfolio data — store links, APK builds, or case study details.
-      </p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 MHER GOORGENIAN · <a href="index.html">← BACK TO RESUME</a></p>
+    <p>© 2026 Mher Goorgenian · <a href="index.html">← BACK TO RESUME</a></p>
   </footer>
 
   <script src="js/nav.js"></script>

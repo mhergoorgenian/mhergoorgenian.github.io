@@ -116,11 +116,12 @@ body {
 .character-mini {
   display: block;
   width: 52px;
-  height: 78px;
+  height: auto;
   object-fit: contain;
   image-rendering: pixelated;
   filter: drop-shadow(0 4px 8px var(--shadow));
   animation: char-bob 2.4s ease-in-out infinite;
+  border-radius: 4px;
 }
 
 @keyframes char-bob {
@@ -229,18 +230,28 @@ body {
 
 /* CSS sprite animation via background */
 .hero-character-sprite {
+  width: 120px;
+  height: 144px;
+  background-repeat: no-repeat;
+  background-size: 240px 144px;
+  image-rendering: pixelated;
+  animation: sprite-idle 1.2s steps(2) infinite;
+}
+
+.hero-character-sprite.profile-portrait {
+  background-image: url('../assets/profile-pixel-idle.png');
+}
+
+.hero-character-sprite:not(.profile-portrait) {
+  background-image: url('../assets/character-idle.png');
   width: 96px;
   height: 144px;
-  background-image: url('../assets/character-idle.png');
-  background-repeat: no-repeat;
   background-size: 192px 144px;
-  image-rendering: pixelated;
-  animation: sprite-idle 0.8s steps(2) infinite;
 }
 
 @keyframes sprite-idle {
   0% { background-position: 0 0; }
-  100% { background-position: -192px 0; }
+  100% { background-position: -240px 0; }
 }
 
 .hero-character-wrap::after {

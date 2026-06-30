@@ -7,7 +7,7 @@
   <script>
     (function () {
       var t = localStorage.getItem('theme');
-      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (!t) t = 'light';
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
@@ -18,17 +18,19 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="logo-block">
-      <h1>Game Tools</h1>
-      <p>2D Development Utilities</p>
-    </div>
-    <div class="header-actions">
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html" class="nav-link">Resume</a>
-        <a href="tools.html" class="nav-link active">Tools</a>
-        <a href="xr.html" class="nav-link">XR / VR / AR</a>
-      </nav>
-      <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <div class="header-inner">
+      <div class="logo-block">
+        <h1>Game Tools</h1>
+        <p>2D Development Utilities</p>
+      </div>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Main">
+          <a href="index.html" class="nav-link">Resume</a>
+          <a href="tools.html" class="nav-link active">Tools</a>
+          <a href="xr.html" class="nav-link">XR / VR / AR</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
     </div>
   </header>
 

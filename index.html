@@ -13,22 +13,19 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/pixel.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <header class="site-header">
     <div class="logo-block">
-      <img src="assets/profile-pixel-mini.png" alt="Mher Goorgenian pixel portrait" class="character-mini" width="64" height="64">
-      <div>
-        <h1 class="site-title">MHER GOORGENIAN</h1>
-        <p class="site-subtitle">GAME DEVELOPER</p>
-      </div>
+      <h1>Mher Goorgenian</h1>
+      <p>Game Developer</p>
     </div>
     <div class="header-actions">
-      <nav class="pixel-nav" aria-label="Main">
-        <a href="index.html" class="nav-link active">RESUME</a>
-        <a href="tools.html" class="nav-link">TOOLS</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="nav-link active">Resume</a>
+        <a href="tools.html" class="nav-link">Tools</a>
         <a href="xr.html" class="nav-link">XR / VR / AR</a>
       </nav>
       <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -36,79 +33,49 @@
   </header>
 
   <main class="container">
-    <section class="pixel-panel hero-panel">
-      <div class="hero-layout">
-        <div class="hero-character-wrap">
-          <div class="hero-character-sprite profile-portrait" role="img" aria-label="Mher Goorgenian pixel portrait"></div>
-        </div>
-        <div>
-          <h2 class="panel-title">&gt; PLAYER SELECT</h2>
-          <p class="hero-text">
-            Hi, I'm <strong>Mher Goorgenian</strong> — a Unity Developer with 3 years of experience
-            in game development. I specialize in Unity with C#, Python, AR, Vuforia, and level design.
-            I enjoy collaborating with teams to create engaging gameplay experiences.
-          </p>
-          <div class="contact-row">
-            <a href="mailto:mher.goor@gmail.com" class="pixel-btn">EMAIL</a>
-            <a href="https://github.com/mhergoorgenian" target="_blank" rel="noopener" class="pixel-btn">GITHUB</a>
-            <a href="https://linkedin.com/in/mher-goorgenian-319954197" target="_blank" rel="noopener" class="pixel-btn">LINKEDIN</a>
-          </div>
-        </div>
+    <section class="card hero-card">
+      <h2 class="section-title">About</h2>
+      <p class="hero-text">
+        Hi, I'm <strong>Mher Goorgenian</strong> — a Unity Developer with 3 years of experience
+        in game development. I specialize in Unity with C#, Python, AR, Vuforia, and level design.
+        I enjoy collaborating with teams to create engaging gameplay experiences.
+      </p>
+      <div class="contact-row">
+        <a href="mailto:mher.goor@gmail.com" class="btn">Email</a>
+        <a href="https://github.com/mhergoorgenian" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+        <a href="https://linkedin.com/in/mher-goorgenian-319954197" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
       </div>
     </section>
 
-    <section class="pixel-panel">
-      <h2 class="panel-title">&gt; EXPERIENCE</h2>
-      <div class="quest-list">
-        <article class="quest-card">
-          <div class="quest-header">
-            <span class="quest-icon">🌐</span>
-            <div>
-              <h3>Unity / XR Developer</h3>
-              <p class="quest-meta">Dadechin Creative Studio · XRoom Platform</p>
-            </div>
-          </div>
+    <section class="card">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>Unity / XR Developer</h3>
+          <p class="meta">Dadechin Creative Studio · XRoom Platform</p>
           <p>Develop immersive XR experiences on the XRoom metaverse platform — virtual spaces for training, meetings, and events. Built interactive 3D environments accessible on desktop and mobile without requiring a headset.</p>
         </article>
-
-        <article class="quest-card">
-          <div class="quest-header">
-            <span class="quest-icon">⚔</span>
-            <div>
-              <h3>Unity Developer</h3>
-              <p class="quest-meta">DynamicPixels · Full-time (Remote) · Aug 2023 – Feb 2024</p>
-            </div>
-          </div>
-          <p>Supported game developers integrating DynamicPixel's multiplayer SDK, leaderboard, and achievement systems. Also worked as Unity Developer on an AR location-based app using the SDK.</p>
+        <article class="timeline-item">
+          <h3>Unity Developer</h3>
+          <p class="meta">DynamicPixels · Full-time (Remote) · Aug 2023 – Feb 2024</p>
+          <p>Supported game developers integrating DynamicPixel's multiplayer SDK, leaderboard, and achievement systems. Also worked on an AR location-based app using the SDK.</p>
         </article>
-
-        <article class="quest-card">
-          <div class="quest-header">
-            <span class="quest-icon">📱</span>
-            <div>
-              <h3>Unity / AR Developer</h3>
-              <p class="quest-meta">ARIISCO · Full-time · Feb 2021 – Jun 2023</p>
-            </div>
-          </div>
-          <p>Built augmented reality applications in Unity — including DecoVision, an AR interior design app with real-time furniture placement using ARFoundation. Focused on spatial UI, plane detection, and interactive AR experiences rather than traditional game development.</p>
+        <article class="timeline-item">
+          <h3>Unity / AR Developer</h3>
+          <p class="meta">ARIISCO · Full-time · Feb 2021 – Jun 2023</p>
+          <p>Built augmented reality applications in Unity — including DecoVision, an AR interior design app with real-time furniture placement using ARFoundation. Focused on spatial UI, plane detection, and interactive AR experiences.</p>
         </article>
-
-        <article class="quest-card">
-          <div class="quest-header">
-            <span class="quest-icon">🐍</span>
-            <div>
-              <h3>Python Developer</h3>
-              <p class="quest-meta">ARIISCO · Part-time · Feb 2021 – Jun 2023</p>
-            </div>
-          </div>
+        <article class="timeline-item">
+          <h3>Python Developer</h3>
+          <p class="meta">ARIISCO · Part-time · Feb 2021 – Jun 2023</p>
           <p>Built small API-based apps with Flask. Used cv2 for image processing and wrote database management scripts to automate tasks and improve system efficiency.</p>
         </article>
       </div>
     </section>
 
-    <section class="pixel-panel two-col">
+    <section class="card two-col">
       <div>
-        <h2 class="panel-title">&gt; SKILLS</h2>
+        <h2 class="section-title">Skills</h2>
         <ul class="skill-grid">
           <li>Unity</li>
           <li>C#</li>
@@ -123,7 +90,7 @@
         </ul>
       </div>
       <div>
-        <h2 class="panel-title">&gt; LANGUAGES</h2>
+        <h2 class="section-title">Languages</h2>
         <ul class="lang-list">
           <li><span>Armenian</span><span class="lang-level">Native</span></li>
           <li><span>Persian</span><span class="lang-level">Native</span></li>
@@ -132,38 +99,38 @@
       </div>
     </section>
 
-    <section class="pixel-panel">
-      <h2 class="panel-title">&gt; PROJECTS</h2>
+    <section class="card">
+      <h2 class="section-title">Projects</h2>
       <div class="project-grid">
         <article class="project-card">
-          <div class="project-thumb xroom">XROOM</div>
+          <span class="project-label">XR</span>
           <h3>XRoom Metaverse</h3>
           <p>XR platform for virtual spaces — training, meetings & events. Built at Dadechin Creative Studio.</p>
-          <a href="xr.html#xroom" class="pixel-link">VIEW XR WORK →</a>
+          <a href="xr.html#xroom" class="text-link">View XR work →</a>
         </article>
         <article class="project-card">
-          <div class="project-thumb deco">AR</div>
+          <span class="project-label">AR</span>
           <h3>DecoVision</h3>
           <p>AR interior design app — visualize furniture placement in real spaces with Unity & ARFoundation.</p>
-          <a href="xr.html#decovision" class="pixel-link">VIEW XR WORK →</a>
+          <a href="xr.html#decovision" class="text-link">View XR work →</a>
         </article>
         <article class="project-card">
-          <div class="project-thumb game">⚔</div>
+          <span class="project-label">Game</span>
           <h3>Isometric Action Game</h3>
           <p>Top-down 3D action with melee combos, enemy spawning, and a boss fight with unique patterns.</p>
         </article>
         <article class="project-card">
-          <div class="project-thumb tools">🛠</div>
+          <span class="project-label">Tools</span>
           <h3>2D Game Tools</h3>
           <p>Python/Gradio utilities: background remover, dungeon map generator, video-to-sprite pipeline.</p>
-          <a href="tools.html" class="pixel-link">VIEW TOOLS →</a>
+          <a href="tools.html" class="text-link">View tools →</a>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Mher Goorgenian · Game Developer Portfolio</p>
+    <p>© 2026 Mher Goorgenian</p>
   </footer>
 
   <script src="js/nav.js"></script>

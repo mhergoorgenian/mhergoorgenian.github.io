@@ -13,22 +13,19 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/pixel.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <header class="site-header">
     <div class="logo-block">
-      <img src="assets/profile-pixel-mini.png" alt="Mher Goorgenian pixel portrait" class="character-mini" width="64" height="64">
-      <div>
-        <h1 class="site-title">GAME TOOLS</h1>
-        <p class="site-subtitle">2D DEV UTILITIES</p>
-      </div>
+      <h1>Game Tools</h1>
+      <p>2D Development Utilities</p>
     </div>
     <div class="header-actions">
-      <nav class="pixel-nav" aria-label="Main">
-        <a href="index.html" class="nav-link">RESUME</a>
-        <a href="tools.html" class="nav-link active">TOOLS</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="nav-link">Resume</a>
+        <a href="tools.html" class="nav-link active">Tools</a>
         <a href="xr.html" class="nav-link">XR / VR / AR</a>
       </nav>
       <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -36,167 +33,96 @@
   </header>
 
   <main class="container">
-    <section class="pixel-panel hero-panel">
-      <h2 class="panel-title">&gt; INVENTORY</h2>
+    <section class="card hero-card">
+      <h2 class="section-title">Overview</h2>
       <p class="hero-text">
         A collection of Python + Gradio tools I built for 2D game development workflows —
         image processing, procedural level design, and sprite sheet pipelines.
       </p>
     </section>
 
-    <section class="tool-showcase">
-      <!-- BG Remover -->
-      <article class="tool-card" id="bg-remover">
-        <div class="tool-visual bg-remover-demo" aria-hidden="true">
-          <div class="demo-sprite char"></div>
-          <div class="demo-arrow">→</div>
-          <div class="demo-sprite char-cutout"></div>
-        </div>
-        <div class="tool-content">
-          <span class="tool-tag">IMAGE · AI</span>
+    <section class="tool-list">
+      <article class="tool-item" id="bg-remover">
+        <div class="tool-preview"><span class="tool-preview-icon">🖼</span></div>
+        <div>
+          <span class="tool-tag">Image · AI</span>
           <h2>Background Remover</h2>
-          <p>
-            High-quality AI background removal powered by <strong>BiRefNet</strong> via rembg.
-            Drag-and-drop web UI with multiple models — handles hair, fur, glass, and complex edges.
-            Supports alpha matting for sharper cutouts. CLI included.
-          </p>
-          <ul class="tool-features">
+          <p>High-quality AI background removal powered by BiRefNet via rembg. Web UI and CLI with alpha matting support.</p>
+          <ul class="feature-list">
             <li>BiRefNet General / Portrait / Lite</li>
             <li>ISNet & U2Net model options</li>
-            <li>Alpha matting with fine-tuned thresholds</li>
             <li>Transparent PNG export</li>
-            <li>Gradio web UI + Click CLI</li>
           </ul>
-          <div class="tool-stack">
-            <span>Python</span><span>Gradio</span><span>rembg</span><span>Pillow</span>
-          </div>
-          <div class="tool-actions">
-            <a href="https://github.com/mhergoorgenian/bg-remover" target="_blank" rel="noopener" class="pixel-btn tool-repo">
-              VIEW ON GITHUB
-            </a>
-          </div>
+          <div class="tag-row"><span>Python</span><span>Gradio</span><span>rembg</span><span>Pillow</span></div>
+          <a href="https://github.com/mhergoorgenian/bg-remover" target="_blank" rel="noopener" class="btn">View on GitHub</a>
         </div>
       </article>
 
-      <!-- Dungeon Map -->
-      <article class="tool-card reverse" id="dungeon-map">
-        <div class="tool-visual dungeon-demo" aria-hidden="true">
-          <div class="dungeon-preview">
-            <div class="dungeon-room r1"></div>
-            <div class="dungeon-room r2"></div>
-            <div class="dungeon-room r3"></div>
-            <div class="dungeon-shaft"></div>
-            <div class="dungeon-room r4"></div>
-            <div class="dungeon-room r5"></div>
-          </div>
-        </div>
-        <div class="tool-content">
-          <span class="tool-tag">PROCEDURAL · LEVEL DESIGN</span>
+      <article class="tool-item reverse" id="dungeon-map">
+        <div class="tool-preview"><span class="tool-preview-icon">🗺</span></div>
+        <div>
+          <span class="tool-tag">Procedural · Level Design</span>
           <h2>Dungeon Map Generator</h2>
-          <p>
-            Procedural <strong>Metroidvania-style</strong> 2D side-view dungeon silhouettes.
-            Generates horizontal floors, vertical shafts, chambers, and looping paths with
-            configurable seeds and exportable room data.
-          </p>
-          <ul class="tool-features">
-            <li>Seed-based reproducible maps</li>
-            <li>Floor count, rooms, shafts, loops</li>
-            <li>Edge roughness & extra branches</li>
-            <li>PNG map + JSON room metadata export</li>
+          <p>Procedural Metroidvania-style 2D side-view dungeon silhouettes with seed-based generation and JSON export.</p>
+          <ul class="feature-list">
+            <li>Configurable floors, rooms, shafts, loops</li>
+            <li>PNG map + JSON room metadata</li>
             <li>CLI for batch generation</li>
           </ul>
-          <div class="tool-stack">
-            <span>Python</span><span>Gradio</span><span>OpenCV</span><span>NumPy</span>
-          </div>
-          <div class="tool-actions">
-            <a href="https://github.com/mhergoorgenian/dungeon-map-generator" target="_blank" rel="noopener" class="pixel-btn tool-repo">
-              VIEW ON GITHUB
-            </a>
-          </div>
+          <div class="tag-row"><span>Python</span><span>Gradio</span><span>OpenCV</span><span>NumPy</span></div>
+          <a href="https://github.com/mhergoorgenian/dungeon-map-generator" target="_blank" rel="noopener" class="btn">View on GitHub</a>
         </div>
       </article>
 
-      <!-- Video Sprite -->
-      <article class="tool-card" id="video-sprite">
-        <div class="tool-visual tool-example-visual">
-          <video class="tool-example-video" src="assets/intro-example.mp4" autoplay muted loop playsinline aria-label="Example input video"></video>
+      <article class="tool-item" id="video-sprite">
+        <div class="tool-preview">
+          <video src="assets/intro-example.mp4" autoplay muted loop playsinline aria-label="Example input video"></video>
         </div>
-        <div class="tool-content">
-          <span class="tool-tag">VIDEO · SPRITES</span>
+        <div>
+          <span class="tool-tag">Video · Sprites</span>
           <h2>Video to Sprite Sheet</h2>
-          <p>
-            Turn gameplay or reference videos into transparent sprite sheets. Extracts frames,
-            removes backgrounds with BiRefNet, trims padding, and packs into a grid with
-            JSON frame metadata for game engines.
-          </p>
-          <ul class="tool-features">
+          <p>Turn videos into transparent sprite sheets with BiRefNet background removal and JSON frame metadata.</p>
+          <ul class="feature-list">
             <li>Configurable frame count & grid layout</li>
-            <li>HQ upscaling for small source frames</li>
-            <li>Alpha matting & output scale control</li>
+            <li>HQ upscaling & alpha matting</li>
             <li>16-frame default (4×4 grid)</li>
-            <li>JSON metadata per frame bounds</li>
           </ul>
-          <div class="tool-stack">
-            <span>Python</span><span>Gradio</span><span>rembg</span><span>OpenCV</span>
-          </div>
-          <div class="tool-actions">
-            <a href="https://github.com/mhergoorgenian/video-to-sprite" target="_blank" rel="noopener" class="pixel-btn tool-repo">
-              VIEW ON GITHUB
-            </a>
-          </div>
+          <div class="tag-row"><span>Python</span><span>Gradio</span><span>rembg</span><span>OpenCV</span></div>
+          <a href="https://github.com/mhergoorgenian/video-to-sprite" target="_blank" rel="noopener" class="btn">View on GitHub</a>
         </div>
       </article>
     </section>
 
-    <section class="pixel-panel" id="sprite-example">
-      <h2 class="panel-title">&gt; WORKFLOW EXAMPLE</h2>
-      <p class="hero-text">Boss intro clip → frame extraction → transparent sprite sheet, ready for your game engine.</p>
+    <section class="card" id="sprite-example">
+      <h2 class="section-title">Workflow Example</h2>
+      <p class="hero-text">Video clip → frame extraction → transparent sprite sheet.</p>
       <div class="pipeline-grid">
         <article class="pipeline-step">
-          <span class="pipeline-label">1 · INPUT VIDEO</span>
-          <div class="pipeline-media">
-            <video src="assets/intro-example.mp4" controls muted playsinline poster="assets/sprite-boss.png"></video>
-          </div>
-          <p class="pipeline-caption">Source clip — <code>Intro.mp4</code></p>
+          <video src="assets/intro-example.mp4" controls muted playsinline></video>
+          <p class="pipeline-caption">1 · Input video</p>
         </article>
         <article class="pipeline-step">
-          <span class="pipeline-label">2 · EXTRACTED FRAME</span>
-          <div class="pipeline-media checkerboard">
-            <img src="assets/sprite-boss.png" alt="Extracted boss sprite with transparent background" class="pixel-art-img">
-          </div>
-          <p class="pipeline-caption">Background removed per frame</p>
+          <img src="assets/sprite-boss.png" alt="Extracted frame with transparent background">
+          <p class="pipeline-caption">2 · Background removed</p>
         </article>
         <article class="pipeline-step">
-          <span class="pipeline-label">3 · SPRITE SHEET</span>
-          <div class="pipeline-media checkerboard">
-            <img src="assets/sprite-sheet-example.png" alt="Final sprite sheet with animation frames" class="pixel-art-img">
-          </div>
-          <p class="pipeline-caption">Packed grid with frame metadata</p>
+          <img src="assets/sprite-sheet-example.png" alt="Final sprite sheet">
+          <p class="pipeline-caption">3 · Sprite sheet output</p>
         </article>
       </div>
     </section>
 
-    <section class="pixel-panel">
-      <h2 class="panel-title">&gt; HOW TO RUN</h2>
-      <pre class="code-block"><code># Each tool is standalone — install deps and launch:
-
-cd bgRemover
-pip install -r requirements.txt
-python app.py
-
-cd dungeonMap
-pip install -r requirements.txt
-python app.py
-
-cd videoSprite
-pip install -r requirements.txt
-python app.py</code></pre>
-      <p class="note-text">Clone any repo from <a href="https://github.com/mhergoorgenian">github.com/mhergoorgenian</a>.</p>
+    <section class="card">
+      <h2 class="section-title">How to Run</h2>
+      <pre class="code-block"><code>cd bgRemover && pip install -r requirements.txt && python app.py
+cd dungeonMap && pip install -r requirements.txt && python app.py
+cd videoSprite && pip install -r requirements.txt && python app.py</code></pre>
+      <p class="note-text">Clone repos from <a href="https://github.com/mhergoorgenian">github.com/mhergoorgenian</a>.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 MHER GOORGENIAN · <a href="index.html">← BACK TO RESUME</a></p>
+    <p>© 2026 Mher Goorgenian · <a href="index.html">Back to resume</a></p>
   </footer>
 
   <script src="js/nav.js"></script>

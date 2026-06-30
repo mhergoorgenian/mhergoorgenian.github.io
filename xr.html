@@ -13,22 +13,19 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/pixel.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <header class="site-header">
     <div class="logo-block">
-      <img src="assets/profile-pixel-mini.png" alt="Mher Goorgenian pixel portrait" class="character-mini" width="64" height="64">
-      <div>
-        <h1 class="site-title">XR / VR / AR</h1>
-        <p class="site-subtitle">IMMERSIVE EXPERIENCES</p>
-      </div>
+      <h1>XR / VR / AR</h1>
+      <p>Immersive Experiences</p>
     </div>
     <div class="header-actions">
-      <nav class="pixel-nav" aria-label="Main">
-        <a href="index.html" class="nav-link">RESUME</a>
-        <a href="tools.html" class="nav-link">TOOLS</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="nav-link">Resume</a>
+        <a href="tools.html" class="nav-link">Tools</a>
         <a href="xr.html" class="nav-link active">XR / VR / AR</a>
       </nav>
       <button type="button" class="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -36,14 +33,14 @@
   </header>
 
   <main class="container">
-    <section class="pixel-panel hero-panel xr-hero">
-      <h2 class="panel-title">&gt; DIMENSION SHIFT</h2>
+    <section class="card hero-card">
+      <h2 class="section-title">Overview</h2>
       <p class="hero-text">
         I build augmented, virtual, and extended reality experiences in Unity — from metaverse
         platforms and XR training to AR interior design. Comfortable with ARFoundation, Vuforia,
         and spatial interaction design.
       </p>
-      <div class="xr-badges">
+      <div class="badge-row">
         <span>Unity</span>
         <span>XR / Metaverse</span>
         <span>ARFoundation</span>
@@ -52,97 +49,73 @@
       </div>
     </section>
 
-    <section class="xr-showcase">
-      <!-- XRoom -->
-      <article class="xr-card featured-xroom" id="xroom">
-        <div class="xr-visual xroom-videos">
-          <article class="xroom-video-card">
-            <video src="assets/xroom-demo-1.mp4" controls playsinline preload="metadata" title="XRoom generator maintenance training demo"></video>
-          </article>
-          <article class="xroom-video-card">
-            <video src="assets/xroom-demo-2.mp4" controls playsinline preload="metadata" title="XRoom metaverse experience at Dadechin"></video>
-          </article>
+    <section class="xr-list">
+      <article class="xr-item featured" id="xroom">
+        <div class="xr-media">
+          <video src="assets/xroom-demo-1.mp4" controls playsinline preload="metadata" title="XRoom training demo"></video>
+          <video src="assets/xroom-demo-2.mp4" controls playsinline preload="metadata" title="XRoom metaverse demo"></video>
         </div>
-        <div class="xr-content">
-          <span class="tool-tag">METAVERSE · XR PLATFORM</span>
+        <div>
+          <span class="tool-tag">Metaverse · XR Platform</span>
           <h2>XRoom</h2>
-          <p class="xroom-tagline">Where reality is more virtual than ever.</p>
+          <p class="tagline">Where reality is more virtual than ever.</p>
           <p>
             Step into a world with <strong>XROOM</strong> where there are no boundaries for creativity,
-            connection, and experience. We provide the tools to build personalized virtual spaces,
-            host meetings, training sessions, and events at a completely new level — and experience
-            the future today.
+            connection, and experience. Build personalized virtual spaces, host meetings, training
+            sessions, and events — and experience the future today.
           </p>
-          <ul class="tool-features">
+          <ul class="feature-list">
             <li>Customizable virtual spaces for training, meetings & events</li>
             <li>Runs on desktop and mobile — no headset required</li>
             <li>XR training modules (e.g. generator maintenance)</li>
-            <li>Built under tight deployment constraints with minimal cost</li>
             <li>Platform: <a href="https://xroomapp.com" target="_blank" rel="noopener">xroomapp.com</a></li>
           </ul>
-          <p class="quest-meta">Role: Unity / XR Developer · Dadechin Creative Studio</p>
-          <a href="https://xroomapp.com" target="_blank" rel="noopener" class="pixel-btn">VISIT XROOM</a>
+          <p class="meta">Role: Unity / XR Developer · Dadechin Creative Studio</p>
+          <a href="https://xroomapp.com" target="_blank" rel="noopener" class="btn">Visit XRoom</a>
         </div>
       </article>
 
-      <article class="xr-card featured" id="decovision">
-        <div class="xr-visual decovision" aria-hidden="true">
-          <div class="ar-frame">
-            <div class="ar-room"></div>
-            <div class="ar-furniture sofa"></div>
-            <div class="ar-furniture lamp"></div>
-            <div class="ar-scan-line"></div>
-          </div>
-        </div>
-        <div class="xr-content">
-          <span class="tool-tag">FLAGSHIP · AR</span>
+      <article class="xr-item" id="decovision">
+        <div class="tool-preview"><span class="tool-preview-icon">📱</span></div>
+        <div>
+          <span class="tool-tag">AR Application</span>
           <h2>DecoVision</h2>
           <p>
             An AR app transforming interior design — users visualize furniture placement in their
             real spaces. Powered by Unity and ARFoundation with a vast décor catalog and
             precision placement for personalized style exploration.
           </p>
-          <ul class="tool-features">
+          <ul class="feature-list">
             <li>Real-time virtual furniture placement</li>
-            <li>Style customization & décor browsing</li>
             <li>Accurate AR plane detection & anchoring</li>
-            <li>Intuitive UI for non-technical users</li>
             <li>Unity · C# · ARFoundation</li>
           </ul>
-          <p class="quest-meta">Role: Unity / AR Developer · ARIISCO</p>
+          <p class="meta">Role: Unity / AR Developer · ARIISCO</p>
         </div>
       </article>
 
-      <article class="xr-card">
-        <div class="xr-visual location-ar" aria-hidden="true">
-          <div class="map-grid">
-            <div class="map-pin p1"></div>
-            <div class="map-pin p2"></div>
-            <div class="map-pin p3"></div>
-            <div class="map-route"></div>
-          </div>
-        </div>
-        <div class="xr-content">
-          <span class="tool-tag">LOCATION · AR</span>
+      <article class="xr-item">
+        <div class="tool-preview"><span class="tool-preview-icon">📍</span></div>
+        <div>
+          <span class="tool-tag">Location · AR</span>
           <h2>AR Location-Based App</h2>
           <p>
             Unity Developer on a location-based AR application at DynamicPixels, integrating
-            the company's multiplayer SDK for development. Combined real-world positioning
-            with interactive AR content.
+            the company's multiplayer SDK. Combined real-world positioning with interactive AR content.
           </p>
-          <ul class="tool-features">
+          <ul class="feature-list">
             <li>GPS / location-triggered AR content</li>
             <li>DynamicPixels SDK integration</li>
             <li>Multiplayer-ready architecture</li>
           </ul>
-          <p class="quest-meta">Role: Unity Developer · DynamicPixels · 2023–2024</p>
+          <p class="meta">Role: Unity Developer · DynamicPixels · 2023–2024</p>
         </div>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Mher Goorgenian · <a href="index.html">← BACK TO RESUME</a></p>
+    <p>© 2026 Mher Goorgenian · <a href="index.html">Back to resume</a></p>
   </footer>
 
   <script src="js/nav.js"></script>

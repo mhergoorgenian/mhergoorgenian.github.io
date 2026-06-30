@@ -1,72 +1,73 @@
-/* ===== LIGHT PIXEL RESUME THEME ===== */
-/* Palette: warm parchment + teal + amber (cozy pixel-art studio) */
+/* ===== RETRO RPG PIXEL THEME ===== */
+/* Palette: indigo quest — violet, gold, soft lavender */
 
 :root {
-  --bg: #f3ede4;
-  --bg-soft: #faf6ef;
-  --bg-panel: #fffbf5;
-  --bg-card: #f7f2ea;
-  --header-bg: rgba(255, 251, 245, 0.9);
-  --footer-bg: rgba(255, 251, 245, 0.85);
-  --border: #ddd4c8;
-  --border-soft: #ebe4da;
-  --text: #2a2622;
-  --text-dim: #6f6760;
-  --accent: #2a9d8f;
-  --accent-hover: #238276;
-  --accent-soft: #dff3ef;
-  --accent-alt: #e07a5f;
-  --accent-alt-soft: #fceee9;
-  --accent-gold: #d4922a;
-  --accent-mint: #52b788;
-  --shadow: rgba(42, 38, 34, 0.07);
-  --shadow-hover: rgba(42, 38, 34, 0.12);
-  --glow-1: rgba(42, 157, 143, 0.1);
-  --glow-2: rgba(212, 146, 42, 0.08);
-  --hero-gradient-end: #f0faf8;
-  --featured-gradient-end: #faf5ee;
-  --code-bg: #ede8e0;
-  --code-text: #4a4540;
+  --bg: #ece8f4;
+  --bg-soft: #f4f1fa;
+  --bg-panel: #faf8ff;
+  --bg-card: #f0ecf8;
+  --header-bg: rgba(250, 248, 255, 0.92);
+  --footer-bg: rgba(250, 248, 255, 0.88);
+  --border: #c8c0dc;
+  --border-soft: #ddd6ec;
+  --text: #1a1628;
+  --text-dim: #5e5870;
+  --accent: #5b4fcf;
+  --accent-hover: #4a3fb8;
+  --accent-soft: #e4dff8;
+  --accent-alt: #e85d75;
+  --accent-alt-soft: #fce8ec;
+  --accent-gold: #d4920a;
+  --accent-mint: #3cb8a8;
+  --shadow: rgba(26, 22, 40, 0.08);
+  --shadow-hover: rgba(26, 22, 40, 0.14);
+  --glow-1: rgba(91, 79, 207, 0.12);
+  --glow-2: rgba(212, 146, 10, 0.07);
+  --hero-gradient-end: #f0ecff;
+  --featured-gradient-end: #faf4ee;
+  --code-bg: #e4deef;
+  --code-text: #3d3850;
   --btn-text: #ffffff;
-  --accent-border: rgba(42, 157, 143, 0.28);
-  --accent-alt-border: rgba(224, 122, 95, 0.28);
-  --nav-shadow: rgba(42, 157, 143, 0.32);
-  --radius: 14px;
-  --radius-sm: 10px;
+  --accent-border: rgba(91, 79, 207, 0.32);
+  --accent-alt-border: rgba(232, 93, 117, 0.28);
+  --nav-shadow: rgba(91, 79, 207, 0.35);
+  --radius: 8px;
+  --radius-sm: 4px;
   --font-pixel: 'Press Start 2P', monospace;
   --font-body: 'Nunito', 'Segoe UI', sans-serif;
+  --pixel-border: 3px solid var(--border);
 }
 
 [data-theme="dark"] {
-  --bg: #13161c;
-  --bg-soft: #1a1e27;
-  --bg-panel: #1f2430;
-  --bg-card: #262c3a;
-  --header-bg: rgba(19, 22, 28, 0.94);
-  --footer-bg: rgba(19, 22, 28, 0.94);
-  --border: #3a4150;
-  --border-soft: #2e3442;
-  --text: #ece7df;
-  --text-dim: #9c9690;
-  --accent: #3dbda8;
-  --accent-hover: #35a894;
-  --accent-soft: #1e3330;
-  --accent-alt: #f0927d;
-  --accent-alt-soft: #3a2a28;
-  --accent-gold: #f0b84a;
-  --accent-mint: #5ecf9a;
-  --shadow: rgba(0, 0, 0, 0.32);
-  --shadow-hover: rgba(0, 0, 0, 0.48);
-  --glow-1: rgba(61, 189, 168, 0.07);
-  --glow-2: rgba(240, 184, 74, 0.05);
-  --hero-gradient-end: #1a2628;
-  --featured-gradient-end: #252018;
-  --code-bg: #181c24;
-  --code-text: #b8b2aa;
+  --bg: #0e0c14;
+  --bg-soft: #14111e;
+  --bg-panel: #1a1626;
+  --bg-card: #221e30;
+  --header-bg: rgba(14, 12, 20, 0.95);
+  --footer-bg: rgba(14, 12, 20, 0.95);
+  --border: #3a3450;
+  --border-soft: #2a2638;
+  --text: #ece6f8;
+  --text-dim: #9b92b0;
+  --accent: #8b7cf6;
+  --accent-hover: #7a6ae8;
+  --accent-soft: #2a2440;
+  --accent-alt: #ff7a96;
+  --accent-alt-soft: #3a2430;
+  --accent-gold: #f0ba4a;
+  --accent-mint: #5edfd6;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow-hover: rgba(0, 0, 0, 0.55);
+  --glow-1: rgba(139, 124, 246, 0.08);
+  --glow-2: rgba(240, 186, 74, 0.05);
+  --hero-gradient-end: #1a1430;
+  --featured-gradient-end: #201828;
+  --code-bg: #12101c;
+  --code-text: #b0a8c8;
   --btn-text: #ffffff;
-  --accent-border: rgba(61, 189, 168, 0.35);
-  --accent-alt-border: rgba(240, 146, 125, 0.35);
-  --nav-shadow: rgba(61, 189, 168, 0.28);
+  --accent-border: rgba(139, 124, 246, 0.38);
+  --accent-alt-border: rgba(255, 122, 150, 0.32);
+  --nav-shadow: rgba(139, 124, 246, 0.32);
 }
 
 *, *::before, *::after {
@@ -85,8 +86,15 @@ body {
   line-height: 1.65;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% 10%, var(--glow-1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 20%, var(--glow-2) 0%, transparent 35%),
+    radial-gradient(circle at 12% 8%, var(--glow-1) 0%, transparent 42%),
+    radial-gradient(circle at 88% 15%, var(--glow-2) 0%, transparent 38%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(128, 128, 160, 0.03) 3px,
+      rgba(128, 128, 160, 0.03) 4px
+    ),
     var(--bg);
   transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
@@ -171,25 +179,26 @@ body {
   color: var(--text-dim);
   text-decoration: none;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
-  box-shadow: 0 2px 8px var(--shadow);
-  transition: all 0.25s ease;
+  box-shadow: 0 3px 0 var(--border-soft);
+  transition: all 0.15s ease;
 }
 
 .nav-link:hover {
   color: var(--accent);
   background: var(--accent-soft);
-  border-color: var(--accent-border);
+  border-color: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px var(--shadow-hover);
+  box-shadow: 0 4px 0 var(--accent-border);
 }
 
 .nav-link.active {
   color: var(--btn-text);
   background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 4px 16px var(--nav-shadow);
+  border-color: var(--accent-hover);
+  box-shadow: 0 3px 0 var(--accent-hover);
+  transform: translateY(1px);
 }
 
 /* Layout */
@@ -220,11 +229,14 @@ body {
 
 .hero-character-wrap {
   position: relative;
-  padding: 1rem;
-  background: linear-gradient(145deg, var(--accent-soft), var(--featured-gradient-end));
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 28px var(--shadow);
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: var(--pixel-border);
+  box-shadow:
+    inset 0 0 0 2px var(--accent-soft),
+    0 4px 0 var(--border),
+    0 6px 20px var(--shadow);
 }
 
 .hero-character {
@@ -254,7 +266,7 @@ body {
   width: 120px;
   height: 120px;
   background-size: 240px 120px;
-  animation: sprite-idle-portrait 1.2s steps(2) infinite;
+  animation: sprite-idle-portrait 1s steps(2) infinite;
 }
 
 @keyframes sprite-idle-portrait {
@@ -303,12 +315,14 @@ body {
 /* Panels */
 .pixel-panel {
   background: var(--bg-panel);
-  border: 1px solid var(--border);
+  border: var(--pixel-border);
   border-radius: var(--radius);
-  box-shadow: 0 6px 24px var(--shadow);
+  box-shadow:
+    0 4px 0 var(--border-soft),
+    0 6px 24px var(--shadow);
   padding: 1.5rem 1.75rem;
   margin-bottom: 1.5rem;
-  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .pixel-panel:hover {
@@ -347,17 +361,22 @@ body {
   color: var(--btn-text);
   background: var(--accent);
   text-decoration: none;
-  border: none;
+  border: 2px solid var(--accent-hover);
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 14px var(--nav-shadow);
-  transition: all 0.25s ease;
+  box-shadow: 0 4px 0 var(--accent-hover);
+  transition: all 0.15s ease;
   cursor: pointer;
 }
 
 .pixel-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--nav-shadow);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 var(--accent-hover);
   background: var(--accent-hover);
+}
+
+.pixel-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--accent-hover);
 }
 
 .pixel-btn[aria-disabled="true"] {
@@ -1123,7 +1142,7 @@ body {
 }
 
 .project-thumb.xroom {
-  background: linear-gradient(135deg, #1e3330 0%, var(--accent) 55%, var(--accent-gold) 100%);
+  background: linear-gradient(135deg, #2a2440 0%, var(--accent) 55%, var(--accent-gold) 100%);
   color: var(--btn-text);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
